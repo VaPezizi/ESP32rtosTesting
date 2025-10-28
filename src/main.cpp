@@ -29,11 +29,11 @@ void blinkTask(void *pvParameters) {
 
   for (;;) {
     int wait = map(potValue, 0 , 4095, 100, args->speed);
-    digitalWrite(args->ledPin, HIGH); // Turn the LED on
-    vTaskDelay(wait / portTICK_PERIOD_MS); // Delay for 1 second
+    digitalWrite(args->ledPin, HIGH); 
+    vTaskDelay(wait / portTICK_PERIOD_MS); 
 
-    digitalWrite(args->ledPin, LOW);  // Turn the LED off
-    vTaskDelay(wait / portTICK_PERIOD_MS); // Delay for 1 second
+    digitalWrite(args->ledPin, LOW);  
+    vTaskDelay(wait / portTICK_PERIOD_MS); 
   }
 }
 
